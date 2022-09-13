@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using NailProject.Data.Configurations;
 using NailProject.Data.Entities;
 namespace NailProject.Data.EF
 {
@@ -14,7 +15,12 @@ namespace NailProject.Data.EF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductsConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
+
+            /* base.OnModelCreating(modelBuilder);*/
         }
         public DbSet<Products> Products { set; get; }
     }

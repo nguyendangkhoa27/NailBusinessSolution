@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace NailProject.Data.Entities
 {
-    internal class OrderDetail
+    public class OrderDetail
     {
             public int Id { get; set; }
+            public int OrderId { get; set; }
             public int ProductId { get; set; }
             public string Quantity { get; set; }
             public decimal Price { set; get; }
-            
+            public Orders Orders { set; get; }
+            public Products Products { set; get; }
     }
 }

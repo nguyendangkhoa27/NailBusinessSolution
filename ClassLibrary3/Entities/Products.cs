@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 namespace NailProject.Data.Entities
 {
     public class Products 
@@ -14,6 +13,8 @@ namespace NailProject.Data.Entities
         public int Stock { set; get; }
         public int ViewCount { set; get; }
         public DateTime CreateDate { set; get; }
-
+        public List<ProductInCategory> ProductInCategories{ set; get; } 
+        
+        public List<OrderDetail> OrderDetail { set; get; }
     }
 }

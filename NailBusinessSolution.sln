@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NailProject", "NailProject\NailProject.csproj", "{175D5573-DDD9-40E5-8678-85AC3C8CC787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NailProject", "NailProject\NailProject.csproj", "{175D5573-DDD9-40E5-8678-85AC3C8CC787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NailProject.Data", "ClassLibrary3\NailProject.Data.csproj", "{27C6E6B9-2FA3-48FE-A9B7-3BA0B4590E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NailProject.Data", "ClassLibrary3\NailProject.Data.csproj", "{27C6E6B9-2FA3-48FE-A9B7-3BA0B4590E6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NailProject.Data.Entities
 {
-    internal class Orders
+    public class Orders
     {
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
@@ -17,5 +17,6 @@ namespace NailProject.Data.Entities
         public string ShipEmail { get; set; }     
         public string ShipPhoneNumber { get; set; }
         public Status Status { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }
