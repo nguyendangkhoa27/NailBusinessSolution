@@ -8,10 +8,10 @@ using NailProject.Data.Configurations;
 using NailProject.Data.Entities;
 namespace NailProject.Data.EF
 {
-    internal class NailDbContext : DbContext
+    public class NailDbContext : DbContext
     {
-        public NailDbContext(DbContextOptions contextOptions) :base(contextOptions) {
-        
+        public NailDbContext(DbContextOptions options) : base(options)
+        {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,9 +19,17 @@ namespace NailProject.Data.EF
             modelBuilder.ApplyConfiguration(new ProductsConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new OrdersConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
 
             /* base.OnModelCreating(modelBuilder);*/
         }
         public DbSet<Products> Products { set; get; }
+        public DbSet<Category> Categories { set; get; }
+        public DbSet<AppConfig> Appconfig { set; get; }
+        public DbSet<OrderDetail> OrderDetail { set; get; }
+        public DbSet<Orders> Orders { set; get; }
+        public DbSet<ProductInCategory> ProductInCategories { set; get; }
+
     }
 }

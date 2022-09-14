@@ -18,6 +18,7 @@ namespace NailProject.Data.Configurations
             builder.ToTable ("ProductInCategory");
 
             builder.HasOne(x => x.Product).WithMany(pc => pc.ProductInCategories).HasForeignKey(pc => pc.ProductId);
+            
             builder.HasOne(x => x.Category).WithMany(pc => pc.ProductInCategories).HasForeignKey(pc => pc.CategoryId);
         }
     }

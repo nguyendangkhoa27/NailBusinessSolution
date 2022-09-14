@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NailProject.Data.Entities
 {
-    internal class AppConfig
+    public class AppConfig
     {
         public string Key { set; get; }
         public string Value { set; get; }
